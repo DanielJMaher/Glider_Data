@@ -1,0 +1,72 @@
+# 2009-03-17: kerfoot@marine - list of standard glider flight controller
+# sensors and CTD-specific science sensors
+# 2009-09-11: kerfoot@marine - sensors added
+# 2010-01-11: kerfoot@marine - added m_depth
+
+# Always include this!
+m_present_time
+
+# Tells us if the glider thinks it's at the surface
+m_appear_to_be_at_surface
+
+# Steering parameters
+m_fin
+c_fin
+m_pitch
+c_pitch
+m_roll
+c_roll
+m_heading
+c_heading
+
+# Glider health
+m_coulomb_amphr
+#m_battery
+#m_battery_inst
+m_vacuum
+
+# Iridium parameters
+m_iridium_call_num
+m_iridium_signal_strength
+m_iridium_redials
+
+# Depth parameters
+m_depth
+m_pressure
+m_altitude
+m_water_depth
+#m_depth_state
+
+# Depth-averaged currents
+m_final_water_vx
+m_final_water_vy
+m_water_vx
+m_water_vy
+
+# GPS sensors
+c_wpt_lat
+c_wpt_lon
+m_gps_lat
+m_gps_lon
+m_lat
+m_lon
+m_gps_status
+m_gps_full_status
+
+# Science sensors
+#sci_software_ver
+sci_ctd41cp_timestamp
+sci_m_present_time
+m_science_clothesline_lag
+#m_science_sent_some_data
+
+# CTD sensors
+sci_water_pressure
+sci_water_cond
+sci_water_temp
+#m_water_temp
+#m_water_cond
+#m_water_pressure
+
+# GliderDOS version
+x_software_ver
