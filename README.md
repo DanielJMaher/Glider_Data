@@ -20,7 +20,7 @@ To be able to convert the data properly, the operator MUST have resolution-paire
 
 ## Required Software and Files
 1. MATLAB
-2. ToolsUI
+2. ToolsUI (for viewing the data)
 3. CSIRO Matlab EOS-80 Seawater Library (http://www.cmar.csiro.au/datacentre/ext_docs/seawater.htm)
 4. Slocum Power Tools Toolbox for MATLAB (http://www.github.com/kerfoot/spt)
 5. TWRC Glider Data Utlities (http://marine.rutgers.edu/~kerfoot/slocum/data/readme/wrc_exe/)
