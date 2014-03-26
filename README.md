@@ -105,7 +105,7 @@ Now that the DbdGroup has been succesfully created and modified, it is time to c
 
 ```
 DbdGroup2TrajectoryNc(dbgroup)
-'''
+```
 
     
 
