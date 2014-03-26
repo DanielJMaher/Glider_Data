@@ -40,7 +40,7 @@ NOTE: There is an simpler alternative method that can be used, but first the sta
 
 Once the data is verified as corrrectly paired formats, it must be converted from the binary glider data files to ascii.  To do this, the TWRC Glider Data Utility 'dbd2asc' should be used.  The utility requires you to send the standard output to a file, or combine the ascii conversion step in with the sensor filter step.
 
-The sensor filter step is necessary because the glider reports a large amount of data that is unrelated to scientific study.  This superfluous data causes the datasets to become much larger than needed, which in turns increases the processing time.
+The sensor filter step is necessary because the glider reports a large amount of data that is unrelated to scientific study.  This superfluous data causes the datasets to become much larger than needed, which in turn increases the processing time.
 
 To fitler the data, the dbd2asc output should be piped to the TWRC utility 'dba_sensor_filter' with a list of sensors desired.  In general, the sensors in standard_sensors.txt can be used during this step.  The combined commands should look like the example below (uses full resolution data):
 
@@ -62,13 +62,14 @@ Once the data has been converted to ascii and filtered by desired sensors the tw
 This merged file is now ready to be processed in MATLAB.  
 
 ####Alternative Method
-The alternative method utilizes John Kerfoot's processDbds.sh script and a cusomt built convert.py utility.  The processDbds.sh script must be slightly modified for every use, but this modification is minimal.  
+The alternative method utilizes John Kerfoot's processDbds.sh script and a cusomt built convert.py utility.  The processDbds.sh script runs the conversion process outlined above automatically for a specified file.  The convert.py utility sends each .dbd and .ebd file in the directory to the process.Dbds.sh script.  Then, the utility sends the converted resolution-paired datasets to the merging utility.  
+
+The processDbds.sh script must be slightly modified for every use, outlined below:  
+
 1. On line  35, the existing location that the file header files should be written to.  
 2. On line 38 the location of the TWRC executables should be specified.  In many cases this will be where the data is.  
 
-Also, the convert.py should have the location of the data defined on line 7.
-
-Next, the convert.py script should run to call the processDbds.sh routine for each data pair.  
+Also, the convert.py should have the location of the data defined on line 7, as well as the data type changed to the proper resolution-paired file extensions.
 
 The conversion and merging of large datasets may take a long period of time.
 
